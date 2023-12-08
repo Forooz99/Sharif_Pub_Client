@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 function App() {
