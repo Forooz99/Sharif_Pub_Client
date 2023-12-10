@@ -1,0 +1,73 @@
+.Container {
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 20px;
+    border-color: rgba(128, 128, 128, 0.2);
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 400px;
+    font-family: Vazirmatn, sans-serif;
+    direction: rtl;
+}
+
+.Card {
+    width: 550px;
+    height: 300px;
+}
+
+.Card:hover .Image{
+    transition: transform 0.5s ease;
+    transform: scale(1.1);
+}
+
+.Card:hover .Title{
+    color: #1e8a79;
+}
+
+.ReleaseDate {
+    color: #414242;
+}
+
+.JournalName  {
+    margin-top : 30px;
+}
+
+.JournalName  * {
+    font-family: "Vazirmatn";
+}
+
+.DownloadButton Button {
+    font-family: "Vazirmatn";
+    margin-top: 20px;
+}
+
+.DownloadButton {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+.Icon {
+    margin-right: 10px;
+    color: #4781e6;
+}
+
+.Title {
+    font-family:  "Vazirmatn ExtraBold";
+    font-size: 20px;
+    direction: rtl;
+}
+
+.ReleaseDate {
+    font-family: "Vazirmatn SemiBold";
+    margin-left: -30px;
+}
+
+.Description {
+    font-size: 15px;
+    margin-top: 12px;
+    color: #656966;
+}
+
+.Image {
+    display : block;
+}
