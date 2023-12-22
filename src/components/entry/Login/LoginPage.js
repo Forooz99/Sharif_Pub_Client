@@ -1,0 +1,89 @@
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import login from '../assets/login.png';
+import '../style.css';
+
+function LoginPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform login logic here
+    console.log('Email:', email);
+    console.log('Password:', password);
+  };
+
+  return (
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
+          <div className="card bg-custom text-white"style={{ borderRadius: '30px' }}>
+            <div className="card-body">
+              <h3 className="card-title text-center">ورود</h3>
+              <div className="d-flex">
+              <img className="image me-3" src={login} alt="login" />
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">
+                    <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+                    ایمیل
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control input-custom"
+                    id="email"
+                    value={email}
+                    onChange={handleEmailChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="password" className="form-label">
+                    <FontAwesomeIcon icon={faLock} className="me-2" />
+                    گذرواژه
+                  </label>
+                  <input
+                    type="password"
+                    className="form-control input-custom"
+                    id="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                    required
+                  />
+                </div>
+                <div className="text-center">
+                  <button type="submit" className="btn btn-primary">
+                    ورود
+                  </button>
+                </div>
+              </form>
+              </div>
+              <div className="d-flex justify-content-center mt-3">
+                <p>ورود با حساب کاربری</p>
+              </div>
+              <div className="d-flex justify-content-center">
+                <a href="#" className="btn btn-outline-primary">
+                  <FontAwesomeIcon icon={faGoogle} className="me-2" />
+                  Google
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default LoginPage;
