@@ -3,24 +3,26 @@ import './Footer.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
-    return (
-        
-        <footer>
-            
-            <p>کلیه حقوق این سایت محفوظ و متعلق به شریف پاب است &copy;</p>
-        
-            <div class="social-icons">
-                <a href="https://www.google.com/" class="fa fa-facebook social"></a>
-                <a href="https://www.google.com/" class="fa fa-instagram social"></a>
-                <a href="https://www.google.com/" class="fa fa-telegram social"></a>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className="footer bg-dark text-light">
+      <div className="container">
+        <p className="text-center">
+          کلیه حقوق این سایت محفوظ و متعلق به شریف پاب است &copy;
+        </p>
+        <div className="text-center">
+          <a href="https://www.google.com/" className="social-icon">
+            <i className="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.google.com/" className="social-icon">
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.google.com/" className="social-icon">
+            <i className="fab fa-telegram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
-  
-
-
-
 export default Footer;
-  

@@ -1,22 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Footer from './components/Footer/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
-import Login from './components/Login/Login';
-import Signup from './components/Signup/Signup';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Login from './components/entry/Login/LoginPage';
+import Signup from './components/entry/Signup/Signup';
+import Footer from './components/Footer/Footer';
+import './App.css';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' exact component={Home} />
-        <Route path='/login' component={Login} />
-        <Route path='/signup' component={Signup} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
-        
       <Footer />
     </Router>
   );

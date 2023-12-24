@@ -96,4 +96,4 @@ function Signup() {
   );
 }
 
-export default RegistrationPage;
+export default Signup;
