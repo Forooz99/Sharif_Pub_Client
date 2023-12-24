@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import register from '../assets/register.png';
-import '../style.css';
-
+import { useNavigate } from 'react-router-dom';import '../style.css';
 function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -27,6 +27,7 @@ function Signup() {
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Password:', password);
+    navigate('/login');
   };
 
   return (

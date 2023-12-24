@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { useNavigate } from 'react-router-dom';
 import login from '../assets/login.png';
 import '../style.css';
 
@@ -9,7 +10,7 @@ import '../style.css';
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -23,6 +24,7 @@ function LoginPage() {
     // Perform login logic here
     console.log('Email:', email);
     console.log('Password:', password);
+    navigate('/profile');
   };
 
   return (
