@@ -1,0 +1,14 @@
+.centered-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.volumes-grid {
+    margin: 1%;
+    padding: 1%;
+}
+  
+.row {
+    margin: 1%;
+}
+  

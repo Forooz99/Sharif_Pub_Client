@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
   return (
-    <footer className="footer bg-light text-dark">
+    <footer className="footer">
       <div className="container">
         <p className="text-center">
           کلیه حقوق این سایت محفوظ و متعلق به شریف پاب است &copy;
