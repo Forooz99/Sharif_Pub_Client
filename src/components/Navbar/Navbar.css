@@ -1,27 +1,16 @@
-/* Navbar.css */
-.navbar {
-    background-color: #11235A;
-    padding: 10px 0;
-  }
-  
-  .navbar-brand {
-    color: white;
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .navbar-nav {
-    text-align: center;
-  }
-  
-  .navbar-nav .nav-link {
-    color: white;
-    font-size: 18px;
-    margin: 0 15px;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link:hover{
-    color: #df7eff; /* Change to a different color when hovering */
-  }
+.big-font {
+  font-size: 32px;
+}
+
+.medium-font {
+  font-size: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.noLine {
+  text-decoration: none;
+  color: black;
+}

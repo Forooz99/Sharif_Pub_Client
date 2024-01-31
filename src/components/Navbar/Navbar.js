@@ -1,34 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Navbar.css';
 
-const Navbar = () => {
+export default function Navigationbar () {
   return (
-    <nav className="navbar navbar-expand-lg justify-content-center">
-      <div className="container">
-        <div className="collapse navbar-collapse justify-content-center">
-          <ul className="navbar-nav">
-          <li className="nav-item">
-              <Link className="nav-link" to="/">
-                خانه
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                ورود
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/signup">
-                ثبت نام
-              </Link>
-            </li>
-            {/* Add more navigation links as needed */}
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar expand="lg" className="bg-body-tertiary fixed-top">
+      <Container>
+        <Navbar.Brand href="#home" className="big-font">شریف پاب</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto justify-content-end" style={{width: "100%"}}>
+            <NavDropdown title="آرشیو" id="basic-nav-dropdown" className="medium-font">
+              <NavDropdown.Item href="#action/3.1" className="medium-font center">نشریه ها</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2" className="medium-font center">عکس ها</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link className="medium-font"><Link className="noLine" to="/">خانه</Link></Nav.Link>
+            <Nav.Link className="medium-font"><Link className="noLine" to="/login">ورود</Link></Nav.Link>
+            <Nav.Link className="medium-font"><Link className="noLine" to="/signup">ثبت نام</Link></Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
-
-export default Navbar;

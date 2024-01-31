@@ -28,3 +28,9 @@ footer {
 .social:hover {
     color: wheat;
 }
+
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
