@@ -25,7 +25,7 @@ export default function ProfilePage () {
       <MDBContainer className="py-5 main-container">
         <MDBRow>
           <MDBCol lg="4">
-            <MDBCard className="mb-4">
+            <MDBCard className="mb-4" style={{ backgroundColor: '#AAA2B8' }}>
               <MDBCardBody className="text-center">
                 <MDBCardImage
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
@@ -38,33 +38,32 @@ export default function ProfilePage () {
                   <MDBBtn>ویرایش عکس</MDBBtn>
                 </div>
               </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-          <MDBCol lg="8">
-            <MDBCard className="mb-4">
               <MDBCardBody>
-                <MDBRow>
-                  <MDBCol md='50' size='120' className='mb-4 mb-md-0'>
+              <MDBRow>
+                  <MDBCol md='50' size='10' className='mb-4 mb-md-0'>
                     <MDBInput label='نام کاربری' labelClass="myCustomLabel" id='form1' type='text' value="نام کاربری طرف"/>
                   </MDBCol>
                 </MDBRow>
                 <hr />
                 <MDBRow>
-                  <MDBCol md='50' size='120' className='mb-4 mb-md-0'>
-                    <MDBInput label='ایمیل' labelClass="myCustomLabel" id='form1' type='text' value="example@example.com"/>
+                  <MDBCol md='50' size='20' className='mb-4 mb-md-0'>
+                    <MDBInput label='ایمیل' labelClass="myCustomLabel" id='form1' type='email' value="example@example.com"/>
                   </MDBCol>
                 </MDBRow>
                 <hr />
                 <MDBRow>
-                  <MDBCol md='50' size='120' className='mb-4 mb-md-0'>
-                    <MDBInput label='گذرواژه' labelClass="myCustomLabel" id='form1' type='text' value="1234"/>
+                  <MDBCol md='50' size='10' className='mb-4 mb-md-0'>
+                    <MDBInput label='گذرواژه' labelClass="myCustomLabel" id='form1' type='password' value="1234"/>
                   </MDBCol>
                 </MDBRow>
+                <MDBBtn>اعمال تغییرات</MDBBtn>
               </MDBCardBody>
             </MDBCard>
-
+          </MDBCol>
+          
+          <MDBCol>
             <MDBRow>
-              <MDBCol md="6">
+              <MDBCol md="20">
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
                     <MDBCardText className="mb-4">نشریه های پسندیده</MDBCardText>
@@ -75,8 +74,9 @@ export default function ProfilePage () {
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
-
-              <MDBCol md="6">
+            </MDBRow>
+            <MDBRow>
+              <MDBCol md="20">
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
                     <MDBCardText className="mb-4">شماره‌های ذخیره شده</MDBCardText>
@@ -89,6 +89,7 @@ export default function ProfilePage () {
               </MDBCol>
             </MDBRow>
           </MDBCol>
+          
         </MDBRow>
       </MDBContainer>
     </section>

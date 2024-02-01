@@ -10,7 +10,7 @@ export default function Navigationbar () {
   return (
     <Navbar expand="lg" className="bg-body-tertiary fixed-top">
       <Container>
-        <Navbar.Brand href="#home" className="big-font"><Link className="noLine" to="/">شریف پاب</Link></Navbar.Brand>
+        <Navbar.Brand className="big-font brand"><Link className="noLine" to="/">شریف پاب</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto justify-content-end" style={{width: "100%"}}>

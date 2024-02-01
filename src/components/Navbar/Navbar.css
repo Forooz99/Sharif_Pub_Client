@@ -19,3 +19,10 @@
   --bs-bg-opacity: 0.5;
   background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
+
+.brand {
+  background: linear-gradient(rgb(228, 42, 181), rgb(199, 149, 223), rgb(6, 94, 196));
+  border-radius: 5px 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
