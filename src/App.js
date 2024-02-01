@@ -1,14 +1,18 @@
 import React from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigationbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Login from './components/entry/Login/LoginPage';
 import Signup from './components/entry/Signup/Signup';
-import MyFooter from './components/Footer/Footer';
-import Profile from './components/Profile/Profile'
+import FooterComponent from './components/Footer/Footer';
+import Profile from './components/Profile/Profile';
+import Search from './components/Search/Search';
+import BannerComponent from './components/Banner/Banner';
 import './App.css';
 
 function App() {
+    
   return (
     <Router>
       <Navigationbar />
@@ -18,7 +22,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-      <MyFooter />
+      <FooterComponent />
     </Router>
   );
 }

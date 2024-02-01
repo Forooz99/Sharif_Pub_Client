@@ -9,7 +9,7 @@ import {
   MDBBtn,
 } from 'mdb-react-ui-kit';
 
-export default function MyFooter() {
+export default function FooterComponent () {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-left'>
       <MDBContainer className='p-4 pb-0'>
@@ -48,7 +48,7 @@ export default function MyFooter() {
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
         &copy; {new Date().getFullYear()}
         <span className='text-dark'>
-        تمام حقوق اين وب‌سايت برای برای شریف پاب است
+        تمام حقوق اين وب‌سايت برای شریف‌پاب است
         </span>
       </div>
     </MDBFooter>
