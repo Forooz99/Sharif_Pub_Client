@@ -1,36 +1,15 @@
-footer {
-    background-color: #11235A; /* Set the background color of the footer */
-    color: #fff; /* Set the text color to white for better contrast */
-    padding: 20px; /* Add some padding for better spacing */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.social-icon {
-  font-size: 30px;
-  margin: 0 10px;
-  color: #df7eff;
-}
-
-
-.social-icons a {
-    color: black;
-    text-decoration: none;
-    font-size: 24px;
-    margin: 0 5px;
-}
-
-.social:hover {
-    color: wheat;
-}
 
 
 .rtl {
     direction: rtl;
     text-align: right;
+}
+
+.main-container-footer {
+    margin-bottom: 0px;
+}
+
+.bg-light {
+    --bs-bg-opacity: 0.1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }

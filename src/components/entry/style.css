@@ -3,7 +3,7 @@
     src: url(assets/Tanha.woff) format('woff');
 }
 
-body{
+body {
     height: auto; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body{
     border-radius: 15px;
 }
 
-.card-body{
+.card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,28 +32,28 @@ body{
     margin-bottom: 10px;
 }
 
-.container{
+.container {
     font-family: tanha;
 }
 
 .switch-container {
     background: linear-gradient(135deg, #4568DC, #b06ab3);
-  }
+}
   
-  .switch-container .nav-link {
+.switch-container .nav-link {
     color: var(--bs-white);
-  }
-  
-  .switch-container .nav-link.active {
+}
+
+.switch-container .nav-link.active {
     color: var(--bs-primary);
     background-color: var(--bs-white);
-  }
+}
 
-  body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
 }
 
 @keyframes gradient {
@@ -66,4 +66,21 @@ body{
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+
+.main-container-login {
+    margin-top: 200px;
+}
+
+.main-container-signup {
+    margin-top: 200px;
+}
+
+.text-font-size {
+    font-size: 20px;
+}
+
+.title-font-size {
+    font-size: 32px;
 }

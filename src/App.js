@@ -8,7 +8,6 @@ import Signup from './components/entry/Signup/Signup';
 import FooterComponent from './components/Footer/Footer';
 import Profile from './components/Profile/Profile';
 import Search from './components/Search/Search';
-import BannerComponent from './components/Banner/Banner';
 import './App.css';
 
 function App() {
