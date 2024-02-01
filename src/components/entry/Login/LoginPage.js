@@ -12,6 +12,7 @@ function LoginPage() {
   const [password, setPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false)
   const navigate = useNavigate();
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -81,14 +82,14 @@ function LoginPage() {
                     />
                   </div>
                   <div className="text-center">
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-primary login-btn">
                       ورود
                     </button>
                   </div>
                 </form>
                 </div>
                 <div className="d-flex justify-content-center mt-3">
-                  <p>ورود با حساب کاربری</p>
+                  <p className='text-font-size'>ورود با گوگل</p>
                 </div>
                 <div className="d-flex justify-content-center">
                   <a href="#" className="btn btn-outline-primary">

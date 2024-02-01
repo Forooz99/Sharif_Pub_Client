@@ -84,3 +84,21 @@ body {
 .title-font-size {
     font-size: 32px;
 }
+
+.link-font-size {
+    font-size: 17px;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2e4e94;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

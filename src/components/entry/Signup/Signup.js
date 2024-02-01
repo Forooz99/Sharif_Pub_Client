@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import register from '../assets/register.png';
-import { useNavigate } from 'react-router-dom';import '../style.css';
+import { Link, useNavigate } from 'react-router-dom';import '../style.css';
+import { width } from '@mui/system';
+
 function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -39,7 +41,7 @@ function Signup() {
               <div className="card-body">
                 <h3 className="card-title text-center title-font-size">ثبت نام</h3>
                 <div className="d-flex">
-                  <img className="image me-3" src={register} alt="register" />
+                  <img className="image me-3" src={register} alt="register"/>
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                       <label htmlFor="email" className="form-label text-font-size">
@@ -84,18 +86,14 @@ function Signup() {
                       />
                     </div>
                     <div className="text-center">
-                      <button type="submit" className="btn btn-primary">
+                      <button type="submit" className="btn btn-primary login-btn">
                         ثبت نام
                       </button>
                     </div>
 
                     <div className="text-center">
-                      <button type="submit" className="btn btn-primary">
-                        ثبت نام ناشر
-                      </button>
-                      <button type="submit" className="btn btn-primary">
-                        ورود به پروفایل
-                      </button>
+                      <p className='link-font-size'><Link to="/login">آیا قبلا ثبت نام کرده اید؟</Link></p>
+                      <p className='link-font-size'><Link to="/login">اگر ناشر هستید، اینجا را کلیک کنید</Link></p>
                     </div>
                   </form>
                 </div>
