@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './components/redux/store';
 import Navigationbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Login from './components/entry/Login/LoginPage';
@@ -10,10 +12,12 @@ import Profile from './components/Profile/Profile';
 import Search from './components/Search/Search';
 import './App.css';
 
+
 function App() {
     
   return (
-    <Router>
+    <Provider store={store}>
+      <Router>
       <Navigationbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +27,8 @@ function App() {
       </Routes>
       <FooterComponent />
     </Router>
+    </Provider>
+    
   );
 }
 

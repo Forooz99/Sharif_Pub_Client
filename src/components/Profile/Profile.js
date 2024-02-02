@@ -1,4 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
+import { logout } from '../redux/store';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import './Profile.css';
 import {
   MDBCol,
@@ -20,6 +24,13 @@ import {
 } from 'mdb-react-ui-kit';
 
 export default function ProfilePage () {
+  const [link, setLink] = useState(""); 
+  const dispatch = useDispatch();
+  const history = useNavigate();
+  const handleLogout = () => {
+    dispatch(logout());
+    history.push("/login");
+  }
   return (
     <section style={{ backgroundColor: 'transparent' }}>
       <MDBContainer className="py-5 main-container">
@@ -88,10 +99,17 @@ export default function ProfilePage () {
                 </MDBCard>
               </MDBCol>
             </MDBRow>
+            <MDBRow>
+              <MDBCol md="20">
+                <MDBCard className="mb-4 mb-md-0"></MDBCard>
+                  <MDBBtn onClick={()=> handleLogout()}>خروج</MDBBtn>
+              </MDBCol>
+            </MDBRow>
           </MDBCol>
           
         </MDBRow>
       </MDBContainer>
+      
     </section>
   );
 }
