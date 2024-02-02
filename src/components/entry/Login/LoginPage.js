@@ -4,13 +4,14 @@ import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import login from '../assets/login.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../style.css';
-
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isChecked, setIsChecked] = useState(false)
+  const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
 
   const handleEmailChange = (e) => {
@@ -30,20 +31,25 @@ function LoginPage() {
   };
 
   const checkHandler = () => {
-    setIsChecked(!isChecked)
-  }
+    setIsChecked(!isChecked);
+  };
 
   return (
     <div className='main-container-login'>
       <div className="container mt-5">
         <div className="row">
           <div className="col-md-6 offset-md-3">
-            <div className="card bg-custom text-white"style={{ borderRadius: '30px' }}>
+            <div className="card bg-custom text-white" style={{ borderRadius: '30px' }}>
               <div className="card-body">
                 <h3 className="card-title text-center title-font-size">ورود</h3>
                 <div className="d-flex">
-                <img className="image me-3" src={login} alt="login" />
-                <form onSubmit={handleSubmit}>
+                  <LazyLoadImage
+                    src={login}
+                    alt="login"
+                    effect="blur"
+                    className="image me-3"
+                  />
+                  <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label text-font-size">
                       <FontAwesomeIcon icon={faEnvelope} className="me-2" />

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import register from '../assets/register.png';
-import { Link, useNavigate } from 'react-router-dom';import '../style.css';
-import { width } from '@mui/system';
+import { Link, useNavigate } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import '../style.css';
 
 function Signup() {
   const [name, setName] = useState('');
@@ -41,7 +43,12 @@ function Signup() {
               <div className="card-body">
                 <h3 className="card-title text-center title-font-size">ثبت نام</h3>
                 <div className="d-flex">
-                  <img className="image me-3" src={register} alt="register"/>
+                  <LazyLoadImage
+                    src={register}
+                    alt="register"
+                    effect="blur"
+                    className="image me-3"
+                  />
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                       <label htmlFor="email" className="form-label text-font-size">
