@@ -11,7 +11,7 @@ export default function Navigationbar () {
     <Navbar expand="lg" className="bg-body-tertiary fixed-top">
       <Container>
         <Navbar.Brand className="big-font brand"><Link className="noLine" to="/">شریف پاب</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto justify-content-end" style={{width: "100%"}}>
             <NavDropdown title="آرشیو" id="basic-nav-dropdown" className="medium-font">
