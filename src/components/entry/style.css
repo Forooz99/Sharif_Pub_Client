@@ -70,11 +70,13 @@ body {
 
 
 .main-container-login {
-    margin-top: 200px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .main-container-signup {
-    margin-top: 200px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .text-font-size {
@@ -92,7 +94,6 @@ body {
 .login-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2e4e94;
     color: white;
     text-align: center;
     text-decoration: none;
