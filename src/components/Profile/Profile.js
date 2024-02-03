@@ -20,7 +20,8 @@ import {
   MDBProgressBar,
   MDBIcon,
   MDBListGroup,
-  MDBListGroupItem
+  MDBListGroupItem,
+  MDBCardTitle
 } from 'mdb-react-ui-kit';
 
 export default function ProfilePage () {
@@ -50,21 +51,22 @@ export default function ProfilePage () {
                 </div>
               </MDBCardBody>
               <MDBCardBody>
-              <MDBRow>
-                  <MDBCol md='50' size='10' className='mb-4 mb-md-0'>
-                    <MDBInput label='نام کاربری' labelClass="myCustomLabel" id='form1' type='text' value="نام کاربری طرف"/>
-                  </MDBCol>
-                </MDBRow>
-                <hr />
-                <MDBRow>
-                  <MDBCol md='50' size='20' className='mb-4 mb-md-0'>
-                    <MDBInput label='ایمیل' labelClass="myCustomLabel" id='form1' type='email' value="example@example.com"/>
-                  </MDBCol>
-                </MDBRow>
-                <hr />
                 <MDBRow>
                   <MDBCol md='50' size='10' className='mb-4 mb-md-0'>
-                    <MDBInput label='گذرواژه' labelClass="myCustomLabel" id='form1' type='password' value="1234"/>
+                    <span>نام کاربری</span>
+                    <MDBInput id='form1' type='text' value="نام کاربری طرف"/>
+                  </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                  <MDBCol md='50' size='20' className='mb-4 mb-md-0 textBox'>
+                    <span>ایمیل</span>
+                    <MDBInput id='form1' type='email' value="example@example.com"/>
+                  </MDBCol>
+                </MDBRow>
+                <MDBRow>
+                  <MDBCol md='50' size='10' className='mb-4 mb-md-0'>
+                    <span>گذرواژه</span>
+                    <MDBInput id='form1' type='password' value="1234"/>
                   </MDBCol>
                 </MDBRow>
                 <MDBBtn>اعمال تغییرات</MDBBtn>
@@ -77,11 +79,10 @@ export default function ProfilePage () {
               <MDBCol md="20">
                 <MDBCard className="mb-4 mb-md-0">
                   <MDBCardBody>
-                    <MDBCardText className="mb-4">نشریه های پسندیده</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}></MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={80} valuemin={0} valuemax={100} />
-                    </MDBProgress>
+                    <MDBCardTitle className="mb-4">نشریه های پسندیده</MDBCardTitle>
+                    <MDBCardText>
+                      {/* liked journals */}
+                    </MDBCardText>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -89,19 +90,18 @@ export default function ProfilePage () {
             <MDBRow>
               <MDBCol md="20">
                 <MDBCard className="mb-4 mb-md-0">
-                  <MDBCardBody>
-                    <MDBCardText className="mb-4">شماره‌های ذخیره شده</MDBCardText>
-                    <MDBCardText className="mb-1" style={{ fontSize: '.77rem' }}></MDBCardText>
-                    <MDBProgress className="rounded">
-                      <MDBProgressBar width={80} valuemin={0} valuemax={100} />
-                    </MDBProgress>   
+                  <MDBCardBody tyle={{ height: '2000px' }}>
+                    <MDBCardTitle className="mb-4">شماره‌های ذخیره شده</MDBCardTitle>
+                    <MDBCardText>
+                      {/* saved volumes */}
+                    </MDBCardText>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
             </MDBRow>
             <MDBRow>
               <MDBCol md="20">
-                <MDBCard className="mb-4 mb-md-0"></MDBCard>
+                  <MDBCard className="mb-4 mb-md-0"></MDBCard>
                   <MDBBtn onClick={()=> handleLogout()}>خروج</MDBBtn>
               </MDBCol>
             </MDBRow>

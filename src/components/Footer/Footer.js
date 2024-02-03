@@ -18,7 +18,7 @@ import {
 export default function FooterComponent () {
   return (
     <div className='main-container-footer'>
-      <MDBFooter bgColor='light' className='text-center text-lg-left fixed-bottom'>
+      <MDBFooter bgColor='light' className='text-center text-lg-left'>
         <MDBContainer className='p-4 pb-0'> 
           <MDBRow className='d-flex justify-content-center'>
             <MDBCol md='5' size='12' className='mb-4 mb-md-0'>
