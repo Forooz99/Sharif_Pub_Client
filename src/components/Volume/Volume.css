@@ -1,13 +1,13 @@
 .Container {
     background-color: rgba(128, 128, 128, 0.1);
-    padding: 20px;
     border-color: rgba(128, 128, 128, 0.2);
     border-radius: 5px;
     border-width: 1px;
     border-style: solid;
-    margin-bottom: 400px;
     font-family: Vazirmatn, sans-serif;
     direction: rtl;
+    margin: 6%;
+    padding: 1%;
 }
 
 .Card {
@@ -64,7 +64,7 @@
 
 .Description {
     font-size: 15px;
-    margin-top: 12px;
+    margin-top: 1%;
     color: #656966;
 }
 
