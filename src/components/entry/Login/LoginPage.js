@@ -4,6 +4,7 @@ import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import login from '../assets/login.png';
+import axios from 'axios';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../style.css';
@@ -24,7 +25,16 @@ function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform login logic here
+    try {
+      const response = axios.post('/api/login/', {
+        email,
+        password,
+      });
+      console.log('Login successful:', response.data);
+      navigate('/profile');
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
     console.log('Email:', email);
     console.log('Password:', password);
     navigate('/profile');

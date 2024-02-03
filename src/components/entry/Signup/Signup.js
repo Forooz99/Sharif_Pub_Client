@@ -4,6 +4,7 @@ import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import register from '../assets/register.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import axios from 'axios';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../style.css';
 
@@ -27,7 +28,18 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform registration logic here
+    try {
+      const response = axios.post('http://your-backend-api-url/signup/', {
+        name,
+        email,
+        password,
+      });
+  
+      console.log('Registration successful:', response.data);
+      navigate('/login');
+    } catch (error) {
+      console.error('Registration failed:', error);
+    }
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Password:', password);
