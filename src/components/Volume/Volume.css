@@ -10,9 +10,11 @@
     padding: 1%;
 }
 
-.Card {
-    width: 550px;
-    height: 300px;
+@media only screen and (max-width: 768px) {
+    .Card {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .Card:hover .Image{

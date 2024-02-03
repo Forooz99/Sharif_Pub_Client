@@ -37,8 +37,8 @@ const VolumeCards = ({
                 <div className="JournalName">
                     <Chip label={journalName} component="a" href="" clickable/>
                 </div>
-                <div className="DownloadButton">
-                    <Button variant="outlined" endIcon={<FontAwesomeIcon className='Icon' icon={faFileArrowDown}onClick={downloadFile}/>}>
+                <div className="DownloadButton" onClick={downloadFile}>
+                    <Button variant="outlined" endIcon={<FontAwesomeIcon className='Icon' icon={faFileArrowDown}/>}>
                         دریافت فایل
                     </Button>
                 </div>
@@ -46,7 +46,7 @@ const VolumeCards = ({
             <CardMedia
                 className='Image'
                 sx={{
-                    width: 220,
+                    width: '35%',
                     aspectRatio: '16/9',
                     flex: '0 0 auto',
                     order: { xs: 1, sm: 2 },
