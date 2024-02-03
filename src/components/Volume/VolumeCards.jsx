@@ -17,7 +17,11 @@ const VolumeCards = ({
                          description = '',
                          releaseDate,
                          img,
+                         fileUrl,
                      }) => {
+                        const downloadFile = () => {
+                            window.open(fileUrl, '_blank');
+                        };
     return (
         <Card className = 'Card' sx={{ display: 'flex' }}>
             <CardContent sx={{flex: '1 1 auto', display: 'flex', flexDirection: 'column'}}>
@@ -34,7 +38,7 @@ const VolumeCards = ({
                     <Chip label={journalName} component="a" href="" clickable/>
                 </div>
                 <div className="DownloadButton">
-                    <Button variant="outlined" endIcon={<FontAwesomeIcon className='Icon' icon={faFileArrowDown}/>}>
+                    <Button variant="outlined" endIcon={<FontAwesomeIcon className='Icon' icon={faFileArrowDown}onClick={downloadFile}/>}>
                         دریافت فایل
                     </Button>
                 </div>
