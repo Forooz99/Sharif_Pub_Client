@@ -24,5 +24,7 @@
 ### `npm run docker-dev-up`
 ### `npm run docker-dev-down`
 
-- فایل های dockerfile.prof و docker-compose.prod برای حالت production هستند که از nginx استفاده می کنیم
+- فایل های dockerfile.prof و docker-compose.prod برای حالت production هستند. فایل nginx.conf نیز برای هندل کردن ریکوئست ها فرانت توسط nginx اضافه شده است. با دستور زیر میتوانیم کانتینر را ران کنیم:
+
+### `docker-compose -f docker-compose.prod.yml build`
 
