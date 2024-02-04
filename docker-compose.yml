@@ -6,6 +6,7 @@ services:
     image: front-dev
     build:
       context: .
+      dockerfile: Dockerfile
     volumes:
       - ./src:/app/src
     ports:
