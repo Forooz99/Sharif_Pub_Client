@@ -19,3 +19,10 @@
 
 
 ## بخش زیرساخت
+داکرایز فرانت به دو حالت development و production صورت گرفته است. 
+- فایل های dockerfile و docker-compose برای  حالت development هستند که کد را به یک ولوم mount می کنیم تا در صورت تغییر، در کانتینر نیز تغییرات دیده شوند. با دستورات زیر میتوانیم اپ ریکت خود در http://localhost:3000 مشاهده کنیم:
+### `npm run docker-dev-up`
+### `npm run docker-dev-down`
+
+- فایل های dockerfile.prof و docker-compose.prod برای حالت production هستند که از nginx استفاده می کنیم
+
